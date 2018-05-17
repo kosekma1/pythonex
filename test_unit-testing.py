@@ -14,6 +14,7 @@ import unittest
 from unit_testing import circle_area
 from math import pi
 
+
 class TestCircleArea(unittest.TestCase):
     def test_area(self):
         # Test areas when radius >= 0
@@ -26,10 +27,13 @@ class TestCircleArea(unittest.TestCase):
         self.assertRaises(ValueError, circle_area, -2)
 
     def test_types(self):
-        # Make sur type errors are raised when necessary
+        # Make surU type errors are raised when necessary
         self.assertRaises(TypeError, circle_area, 3+5j)
         self.assertRaises(TypeError, circle_area, True)
         self.assertRaises(TypeError, circle_area, "radius")
+
+if __name__ == '__main__':
+  unittest.main()         # easiest way to run unittest
 
 
 # to run test go to command line
